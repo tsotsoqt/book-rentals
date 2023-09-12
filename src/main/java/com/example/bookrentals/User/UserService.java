@@ -15,8 +15,6 @@ public class UserService {
     //adds a user to the database
     public UserDTO registerUser(UserDTO userDTO) {
         if (userRepository.existsByEmail(userDTO.getEmail())) {
-            // You can throw an exception, return an error response, or handle the duplicate registration in some way.
-            // For now, let's just return null to indicate a duplicate registration.
             return null;
         }
         UserEntity userEntity = userConverter.toEntity(userDTO);
