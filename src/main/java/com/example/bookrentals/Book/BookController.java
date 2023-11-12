@@ -63,7 +63,7 @@ public class BookController {
         return new ResponseEntity<>(bookDto, HttpStatus.CREATED);
     }
 
-    //completely a book complete from database
+    //completely delete a book complete from database
     @DeleteMapping("/delete/{ISBN}")
     public ResponseEntity<Void> deleteBookByIsbn(@PathVariable String ISBN) {
         bookService.deleteBookByIsbn(ISBN);
